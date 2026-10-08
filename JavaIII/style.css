@@ -1,0 +1,152 @@
+/* Variablat CSS për ngjyrat dhe hapësirat */
+:root {
+  --primary-color: #125b52;
+  --primary-hover: #0d433c;
+  --bg-color: #f2f6f9;
+  --card-bg: #ffffff;
+  --text-color: #17263c;
+  --text-muted: #556070;
+  --border-color: #d1dbe5;
+  
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.8rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  
+  --radius-sm: 20px;
+  --radius-md: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.main-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  background-color: var(--primary-color);
+  margin-bottom: var(--spacing-lg);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+/* Paneli i Afishes */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  width: 100%;
+  max-width: 580px; /* Parandalon daljen nga ekrani dhe nuk del nga ekrani 360px */
+}
+
+/* Etiketat (Badges) */
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  border-radius: var(--radius-sm);
+}
+
+/* Diferencimi visual jo vetëm me ngjyrë (Kërkesa e akcesibilitetit) */
+.badge-solid {
+  border: 1.5px solid var(--primary-color);
+}
+
+.badge-dashed {
+  border: 1.5px dashed var(--primary-color); /* Vija të ndërprera */
+}
+
+.badge-outline {
+  border: 1.5px solid var(--primary-color);
+}
+
+/* Teksti i kartës */
+.card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-color);
+}
+
+.card-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-md);
+}
+
+.card-description {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Butoni / Lidhja */
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, outline 0.1s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Interaktiviteti dhe fokusi i dukshëm gjatë navigimit me TAB */
+.btn:focus-visible {
+  outline: 3px solid #000000;
+  outline-offset: 3px;
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: var(--spacing-lg);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
