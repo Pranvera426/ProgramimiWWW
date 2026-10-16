@@ -1,0 +1,31 @@
+* { box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
+ }
+
+body { 
+    font-family: system-ui, sans-serif; margin: 1rem; }
+.resources { padding: 1rem; 
+    border: 2px solid navy; 
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1rem;
+gap: 1rem 
+
+}
+
+.resources h1,p,a{
+    display: grid;
+    grid-template-columns: 2rem;
+}
+
+@media(min-width:1000px){
+   .resources :nth-child(1){
+    grid-template-columns: 1/-1;
+    grid-template-columns: repeat(2,1rem);
+   }
+
+   
+}
+a:focus-visible { outline: 3px solid navy; outline-offset: 3px; }
